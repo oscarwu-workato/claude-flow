@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-02-17T11:15:04.459Z",
+  "environment": {
+    "backend": "JsonFileBackend (fallback)",
+    "usersScaled": 200,
+    "tenants": 20,
+    "totalEntriesInserted": 6101
+  },
+  "q1_singleUserSingleTenant": {
+    "durationMs": 0.32,
+    "rowsReturned": 1,
+    "passed": true
+  },
+  "q1_fiveUsersMultiTenant": {
+    "durationMs": 44.19,
+    "users": 5,
+    "entriesPerUser": 20,
+    "crossTenantLeakChecksFailed": 0,
+    "passed": true
+  },
+  "q3_hundredsUsersScale": {
+    "insertDurationMs": 83.33,
+    "insertsPerSecond": 72003.87,
+    "sampledQueryDurationMs": 21.91,
+    "sampledQueries": 100,
+    "sampledQueryQps": 4564.49,
+    "sampledIsolationFailures": 0,
+    "passed": true
+  },
+  "caveat": "These measurements validate the JSON fallback backend behavior in this environment; they do not represent a full end-to-end distributed production benchmark."
+}
